@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content=
+        "width=device-width,
+        initial-scale=1.0" />
+ 
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="style.css"> <!--Link to style of clock for FRONTEND-->
+</head>
+ 
+<body>
+    <div id="clock">8:10:45</div>
+ 
+    <script>
+        setInterval(showTime, 1000);
+        function showTime() {
+            let time = new Date();
+            let hours = time.getHours();
+            let mins = time.getMinutes();
+            let secs = time.getSeconds();
+            am_pm = "AM";
+ 
+            if (hours > 12) {
+                hours -= 12;
+                am_pm = "PM";
+            }
+            if (hours == 0) {
+                hours = 12;
+                am_pm = "AM";
+            }
+ 
+            hours = hours< 10 ? "0" + hours : hours;
+            mins = mins < 10 ? "0" + mins : mins;
+            secs = secs < 10 ? "0" + secs : secs;
+ 
+            let currentTime = hours + ":"
+                + mins + ":" + secs + am_pm;
+ 
+            document.getElementById("clock")
+                .innerHTML = currentTime;
+        }
+ 
+        showTime();
+    </script>
+</body>
+ 
+</html>
