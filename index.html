@@ -7,11 +7,16 @@
         "width=device-width,
         initial-scale=1.0" />
  
-    <title>Digital Clock</title>
+    <title>Siren Sounds</title>
     <link rel="stylesheet" href="style.css"> <!--Link to style of clock for FRONTEND-->
 </head>
  
 <body>
+     <div class = "date">
+        <span id="dow">Day</span>,
+        <span id="mon">Month</span>
+        <span id="day">00</span>,
+        <span id="year">Year</span>
     <div id="clock">8:10:45</div>
  
     <script>
@@ -41,12 +46,16 @@
             hours = hours< 10 ? "0" + hours : hours;
             mins = mins < 10 ? "0" + mins : mins;
             secs = secs < 10 ? "0" + secs : secs;
+         
+            //date formatting
+            let dow = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            let months = ["January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December"];
             
             //display current time and date
-            let currentDate = mon + "," +  day + "," + year;
+            let currentDate = dow[day] + "," + months[mon] + " " + day + " " + year;
             let currentTime = hours + ":"
                 + mins + ":" + secs + am_pm;
-            document.getElementById("clock")
+            document.getElementByClassName("date")[0]
                 .innerHTML = currentDate;
             document.getElementById("clock")
                 .innerHTML = currentTime;
