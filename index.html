@@ -21,8 +21,13 @@
             let hours = time.getHours();
             let mins = time.getMinutes();
             let secs = time.getSeconds();
+            let day = time.getDay();
+            let mon = time.getMonth();
+            let day = time.getDate();
+            let year = time.getFullYear();
             am_pm = "AM";
- 
+            
+            //Convert clock to 12 hr format
             if (hours > 12) {
                 hours -= 12;
                 am_pm = "PM";
@@ -31,14 +36,18 @@
                 hours = 12;
                 am_pm = "AM";
             }
- 
+            
+            //update time and seconds if less than 10
             hours = hours< 10 ? "0" + hours : hours;
             mins = mins < 10 ? "0" + mins : mins;
             secs = secs < 10 ? "0" + secs : secs;
- 
+            
+            //display current time and date
+            let currentDate = mon + "," +  day + "," + year;
             let currentTime = hours + ":"
                 + mins + ":" + secs + am_pm;
- 
+            document.getElementById("clock")
+                .innerHTML = currentDate;
             document.getElementById("clock")
                 .innerHTML = currentTime;
         }
