@@ -1,4 +1,4 @@
- <script>
+
         //SelectMenu Customization
         const selectMenu = document.querySelectorAll("select");
         
@@ -31,4 +31,3 @@
         setAlarmBtn.addEventListener("click", setAlarm);
         
      
-    </script>
