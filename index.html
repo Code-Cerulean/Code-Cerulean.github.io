@@ -13,11 +13,12 @@
  
 <body>
     
-    <div id="date">mon day,year</div>
-    <div id="clock">8:10:45</div>
+    <!--<div id="date">mon day,year</div>-->
+    <!--<div id="clock">8:10:45</div>-->
 
  <div class = "wrapper">
-  
+    <div id="date">mon day,year</div>
+    <div id="clock">8:10:45</div>
   <input onchange = "setAlarmTime(this.value)" name = "alarmTime" type="datetime-local">
  <div class = "content">
     <div class = "column">
@@ -118,8 +119,6 @@
  </div>
  </div>
    
-    
- 
     <script>
         setInterval(showTime, 1000);
         function showTime() {
@@ -168,8 +167,8 @@
         }
  
         showTime();
-     const audio = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mixkit);
-     audio.loop = true;
+     //const audio = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mixkit);
+     //audio.loop = true;
      let alarmTime = null;
      let alarmTimeout = null;
      
