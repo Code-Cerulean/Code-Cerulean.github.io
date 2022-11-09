@@ -17,9 +17,12 @@
        }
        #date {
          font-size: 50px;
+         font-weight: 300;
+         letter-spacing: 3px;
        }
        #clock {
            font-size: 150px;
+           font-weight: 200;
            width: 900px;
            margin: 10px;
            text-align: center;
