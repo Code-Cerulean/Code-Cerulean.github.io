@@ -10,12 +10,20 @@
            align-items: center;
            background: #d3eaf2;
        }
+       .wrapper {
+           text-align: center;
+           justify-content: center;
+           align-items: center;
+       }
+       #date {
+         font-size: 50px;
+       }
        #clock {
-            font-size: 175px;
-            width: 900px;
-            margin: 200px;
-            text-align: center;
-            border: 2px solid black;
-            border-radius: 20px;
+           font-size: 175px;
+           width: 900px;
+           margin: 10px;
+           text-align: center;
+           border: 2px solid black;
+           border-radius: 20px;
        }
  </style>
