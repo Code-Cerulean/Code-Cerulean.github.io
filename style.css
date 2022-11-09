@@ -12,9 +12,13 @@
        align-items: center;
        justify-content: center; 
       }
+      body{
+        min-height: 100vh;
+        background: #4a98f7;
+      }
       .wrapper{
          width: 440px;
-         backgroung: #fff;
+         background: #fff;
          border-radius: 10px;
          flex-direction: column;
          padding: 30px 30px 38px; 
