@@ -11,6 +11,8 @@
            float: left;
            background-color: white; 
            overflow: hidden;
+           position: fixed;
+           top: 0;
        }
        .bar a {
            float: left;
@@ -36,8 +38,9 @@
 
 /* This adjusts the background and overall alignment of components */
        body {
+           margin-top: 100px;
            height: 100vh;
-           display: grid;
+           
            justify-content: center;
            align-items: center;
            background: #d3eaf2;
