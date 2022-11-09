@@ -13,9 +13,13 @@
  
 <body>
     
-    <div id="date">mon day,year</div>
-    <div id="clock">8:10:45</div>
+    <!--<div id="date">mon day,year</div>-->
+    <!--<div id="clock">8:10:45</div>-->
+
  <div class = "wrapper">
+  <div id="date">mon day,year</div>
+  <div id="clock">8:10:45</div>
+  <input onchange = "setAlarmTime(this.value)" name = "alarmTime" type="datetime-local">
  <div class = "content">
     <div class = "column">
      <select>
@@ -42,6 +46,7 @@
     </div>
  </div>
  <button>Set Alarm</button>
+ <button>Clear Alarm</button>
  </div>
    
     
@@ -82,7 +87,8 @@
             //date formatting
             let dow = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             let months = ["January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December"];
-         
+             
+            //displays date
             document.getElementById("date").innerHTML = months[currentMonth - 1] + " " + currentDay + "," + currentDate.getFullYear();
           
             //display current time and date
@@ -95,6 +101,15 @@
         }
  
         showTime();
+     let alarmTime = null;
+     let alarmTimeout = null;
+     
+     
+     function setAlarmTime(value){
+        alarmTime = value;  
+        console.log(alarmTime);
+     
+     }
     </script>
 </body>
  
