@@ -76,4 +76,25 @@
            margin: 5px;
            font-size: 20px;
        }
+
+/* This adjusts the buttons */
+       .wrapper button {
+           width: 200px;
+           outline: none;
+           border: none;
+           cursor: pointer;
+           color: black;
+           margin-top: 20px;
+           font-size: 20px
+           font-family: 'Titillium Web', sans-serif;
+           letter-spacing: 1px;
+           padding: 17px 0;
+           border-radius: 5px;
+           background: white;
+           display: inline;
+       }
+       .wrapper button:hover {
+           background-color: #e9f5f9;
+           color: black;
+       } 
  </style>
