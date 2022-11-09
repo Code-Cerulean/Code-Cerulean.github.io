@@ -23,9 +23,6 @@
 <!--End of top menu bar-->
  
 <body>
-    
-    <!--<div id="date">mon day,year</div>-->
-    <!--<div id="clock">8:10:45</div>-->
 
  <div class = "wrapper">
     <div id="date">mon day,year</div>
@@ -51,9 +48,9 @@
     </div>
  </div>
      <button onclick="setAlarm()" class = "button set-alarm">Set Alarm</button>
-     <button onclick = "clearAlarm()" class = "button clear-alarm">Clear Alarm</button>
- 
+     <button onclick="setAlarm()" class = "button set-alarm">Set Alarm</button>
  </div>
+ <script src=script2.js></script>
    
  <script>
         //SelectMenu Customization
@@ -82,7 +79,7 @@
         setAlarmBtn = document.querySelctor("button");
         
         function setAlarm(){
-            let time = '${selectMenu
+            let time = '${selectMenu[0].value}:${selectMenu[1].value} ${selectMenu[2].value}
         
         }
         setAlarmBtn.addEventListener("click", setAlarm);
