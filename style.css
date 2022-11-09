@@ -1,8 +1,11 @@
  <style>
-       *{
+/* Overall website */
+       * {
            margin: 0;
            padding: 0;
        }
+
+/* This adjusts the background and overall alignment of components */
        body {
            height: 100vh;
            display: grid;
@@ -10,17 +13,23 @@
            align-items: center;
            background: #d3eaf2;
        }
+
+/* This adjusts the date and the time overall */
        .wrapper {
            text-align: center;
            justify-content: center;
            align-items: center;
            font-family: "Segoe UI", sans-serif;
        }
+
+/* This adjusts the date specifically */
        #date {
          font-size: 50px;
          font-weight: 300;
          letter-spacing: 3px;
        }
+
+/* This adjusts the clock spcifically */
        #clock {
            font-size: 150px;
            font-weight: 200;
@@ -31,6 +40,8 @@
            border-radius: 20px;
            background: white;
        }
+
+/* The alarm options */
        .column {
            display: inline;
            margin: 5px;
