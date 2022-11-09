@@ -45,8 +45,10 @@
      </select>
     </div>
  </div>
- <button>Set Alarm</button>
- <button>Clear Alarm</button>
+ <div class ="controls">
+     <button onclick="setAlarm()" class = "button set-alarm">Set Alarm</button>
+     <button onclick = "clearAlarm()" class = "button clear-alarm">Clear Alarm</button>
+ </div>
  </div>
    
     
@@ -94,8 +96,6 @@
             //display current time and date
             let currentTime = hours + ":"
                 + mins + ":" + secs + am_pm;
-            //document.getElementByClassName("date")[0]
-               // .innerHTML = currentDate;
             document.getElementById("clock")
                 .innerHTML = currentTime;
         }
@@ -108,8 +108,29 @@
      function setAlarmTime(value){
         alarmTime = value;  
         console.log(alarmTime);
-     
      }
+     
+     function setAlarm(){
+       if(alarmTime){
+           const current = newDate();
+           const timetoAlarm = newDate(alarmTime);
+           
+           if (timeToAlarm > current) {
+               const timeout = timeToAlarm.getTime() - current.getTime();
+               alarmTimeout = setTimeout(() => audio.play, timeout);
+               alert('Alarm set');
+           }
+       }
+     }
+     
+     function clearAlarm() {
+       audio.pause();
+       if (alarmTimeout){
+           clearTimeout(alarmTimeout);
+           alert('Alarm cleared');
+       }
+    }
+     
     </script>
 </body>
  
