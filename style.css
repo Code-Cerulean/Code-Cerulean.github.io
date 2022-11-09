@@ -1,5 +1,5 @@
  <style>
-        #clock {
+        .clock {
             font-size: 175px;
             width: 900px;
             margin: 200px;
@@ -7,18 +7,47 @@
             border: 2px solid black;
             border-radius: 20px;
         }
-      body, .wrapper{
+      body, .wrapper, .content{
        display:flex;
        align-items: center;
        justify-content: center; 
       }
       .wrapper{
-       width: 440px;
-       backgroung: #fff;
-       border-radius: 10px;
-       flex-direction: column;
-       padding: 30px 30px 38px;
-       
+         width: 440px;
+         backgroung: #fff;
+         border-radius: 10px;
+         flex-direction: column;
+         padding: 30px 30px 38px; 
+      }
+      .wrapper .content{
+        width: 100%
+        justify-content: space-between;
+      }
+      .content .column{
+        border-radius: 5px;
+        padding 0 10px;
+        border: 1px solid #999;
+        width: calc(100% / 3 - 5px);  
+      }
+      .column select{
+        outline: none;
+        border: none;
+        height: 53px;
+        width: 100%;
+        font-size: 19px;
+      }
+      .wrapper button{
+        width 100%;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        margin-top: 20px;
+        font-size: 20px;
+        padding: 17px 0;
+        border-radius: 5px;
+        background: #4a98f7;
+      
       }
       
     </style>
