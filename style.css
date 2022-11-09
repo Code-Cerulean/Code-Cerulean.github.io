@@ -7,6 +7,15 @@
             border: 2px solid black;
             border-radius: 20px;
         }
+ </style>
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+ *{
+   margin: 0;
+   padding: 0;
+   box-sizing: 0;
+   font-family: 'Poppins, sans-serif;  
+ }
       body, .wrapper, .content{
        display:flex;
        align-items: center;
@@ -14,7 +23,7 @@
       }
       body{
         min-height: 100vh;
-        background: #4a98f7;
+        background: none;
       }
       .wrapper{
          width: 440px;
@@ -54,4 +63,4 @@
       
       }
       
-    </style>
+
