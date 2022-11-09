@@ -12,9 +12,38 @@
 </head>
  
 <body>
-
+    
     <div id="date">mon day,year</div>
     <div id="clock">8:10:45</div>
+ <div class = "wrapper">
+ <div class = "content">
+    <div class = "column">
+     <select>
+       <option value = "Hour" selected hidden>Hour</option>
+       <option value = "01">01</option>
+       <option value = "02">02</option>
+       <option value = "03">03</option>
+     </select>
+    </div>
+   <div class = "column">
+     <select>
+       <option value = "Minute" selected hidden>Minute</option>
+       <option value = "01">01</option>
+       <option value = "02">02</option>
+       <option value = "03">03</option>
+     </select>
+    </div>
+   <div class = "column">
+     <select>
+       <option value = "AM/PM" selected hidden>AM/PM</option>
+       <option value = "AM">AM</option>
+      <option value = "PM">PM</option>
+     </select>
+    </div>
+ </div>
+ <button>Set Alarm</button>
+ </div>
+   
     
  
     <script>
@@ -24,10 +53,6 @@
             let hours = time.getHours();
             let mins = time.getMinutes();
             let secs = time.getSeconds();
-            //let day = time.getDay();
-            //let mon = time.getMonth();
-            //let date = time.getDate();
-            //let year = time.getFullYear();
             am_pm = "AM";
             
             //Convert clock to 12 hr format
@@ -45,7 +70,7 @@
             mins = mins < 10 ? "0" + mins : mins;
             secs = secs < 10 ? "0" + secs : secs;
          
-         
+            //updates current date
             var currentDate  = new Date(),
             currentDay   = currentDate.getDate() < 10 
                  ? '0' + currentDate.getDate() 
@@ -57,13 +82,10 @@
             //date formatting
             let dow = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             let months = ["January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December"];
-
-            document.getElementById("date").innerHTML = currentDay + '/' + currentMonth + '/' +  currentDate.getFullYear();
-            document.getElementById("date").innerHTML = months[currentMonth - 1] + " " + currentDay + "," + currentDate.getFullYear();
          
-            
+            document.getElementById("date").innerHTML = months[currentMonth - 1] + " " + currentDay + "," + currentDate.getFullYear();
+          
             //display current time and date
-            //let currentDate = dow[day] + "," + months[mon] + " " + date + " " + year;
             let currentTime = hours + ":"
                 + mins + ":" + secs + am_pm;
             //document.getElementByClassName("date")[0]
