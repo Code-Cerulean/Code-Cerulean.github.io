@@ -27,4 +27,8 @@
            border-radius: 20px;
            background: white;
        }
+       .column {
+           display: inline;
+           margin: 5px;
+       }
  </style>
