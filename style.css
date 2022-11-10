@@ -3,6 +3,7 @@
        * {
            margin: 0;
            padding: 0;
+           border: 0;
        }
 
 /* Start of Menu Bar */
@@ -77,12 +78,38 @@
            background: white;
        }
 
-/* The alarm options */
+/* Start alarm options */
        .column {
            display: inline;
            margin: 5px;
-           font-size: 20px;
        }
+       .wrapper .content {
+           width: 100%
+           justify-content: space-between;
+           padding: 20px 0 4px;
+       }
+       .content .column {
+           border-radius: 8px;
+           padding: 10px 5px 10px;
+           border: 1px solid white;
+           width: calc(100% / 3 - 5px);
+           height: 53px;
+           background-color: white;
+       }
+       .column select {
+           outline: none;
+           border: none;
+           border-radius: 8px;
+           height: 40px;
+           width: 90px;
+           font-size: 13px;
+           font-family: 'Titillium Web', sans-serif;
+           font-style: bold;
+           letter-spacing: 1px;
+           cursor: pointer;
+           padding: 10px 10px 10px;
+       }
+/* End alarm options */
 
 /* This adjusts the buttons */
        .wrapper button {
@@ -90,14 +117,14 @@
            outline: none;
            border: none;
            cursor: pointer;
-           color: black;
+           color: white;
            margin-top: 20px;
-           font-size: 20px
+           font-size: 15px;
            font-family: 'Titillium Web', sans-serif;
            letter-spacing: 1px;
            padding: 17px 0;
            border-radius: 5px;
-           background: white;
+           background: black;
            display: inline;
        }
        .wrapper button:hover {
