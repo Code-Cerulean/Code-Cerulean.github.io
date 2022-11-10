@@ -9,7 +9,7 @@
 /* Start of Menu Bar */
        .bar {
            width: 100%;
-           float: left;
+           float: none;
            background-color: white; 
            overflow: hidden;
            position: fixed;
