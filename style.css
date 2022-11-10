@@ -13,6 +13,7 @@
            overflow: hidden;
            position: fixed;
            top: 0;
+           font-family: 'Titillium Web', sans-serif;
        }
        .bar a {
            float: left;
@@ -21,13 +22,13 @@
            padding: 14px 16px;
            text-decoration: none; 
            letter-spacing: 2px;
-           font-family: "Segoe UI", sans-serif;
+           font-family: 'Titillium Web', sans-serif;
            font-size: 17px;
            font-weight: 200px;
        }
        .bar a.split:hover {
-           background-color: #e9f5f9;
-           color: black;
+           background-color: #165a72;
+           color: white;
        }
        .bar a.split {
            float: right;
@@ -40,7 +41,6 @@
        body {
            margin-top: 100px;
            height: 100vh;
-           
            justify-content: center;
            align-items: center;
            background: #d3eaf2;
@@ -51,7 +51,8 @@
            text-align: center;
            justify-content: center;
            align-items: center;
-           font-family: "Segoe UI", sans-serif;
+           font-family: 'Titillium Web', sans-serif;
+           padding: 0 250px;
        }
 
 /* This adjusts the date specifically */
@@ -59,12 +60,15 @@
          font-size: 50px;
          font-weight: 300;
          letter-spacing: 3px;
+         font-family: 'Titillium Web', sans-serif;
+         font-style: italic;
        }
 
 /* This adjusts the clock spcifically */
        #clock {
            font-size: 150px;
            font-weight: 200;
+           font-family: 'Titillium Web', sans-serif;
            width: 900px;
            margin: 10px;
            text-align: center;
@@ -97,7 +101,7 @@
            display: inline;
        }
        .wrapper button:hover {
-           background-color: #e9f5f9;
-           color: black;
+           background-color: #165a72;
+           color: white;
        } 
  </style>
