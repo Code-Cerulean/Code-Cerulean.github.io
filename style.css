@@ -113,17 +113,17 @@
 
 /* This adjusts the buttons */
        .wrapper button {
-           width: 200px;
+           width: 197px;
            outline: none;
            border: none;
            cursor: pointer;
            color: white;
-           margin-top: 20px;
+           margin-top: 15px;
            font-size: 15px;
            font-family: 'Titillium Web', sans-serif;
            letter-spacing: 1px;
            padding: 17px 0;
-           border-radius: 5px;
+           border-radius: 8px;
            background: black;
            display: inline;
        }
