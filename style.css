@@ -55,6 +55,8 @@
            align-items: center;
            font-family: 'Titillium Web', sans-serif;
            padding: 0 250px;
+           display: flex;
+           flex-direction: column;
        }
 
 /* This adjusts the date specifically */
