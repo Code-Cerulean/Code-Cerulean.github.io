@@ -94,10 +94,10 @@
        }
        .content .column {
            border-radius: 8px;
-           padding: 10px 5px 10px;
+           padding: 8px 3px 8px;
            border: 1px solid white;
            width: calc(100% / 3 - 5px);
-           height: 53px;
+           height: 40px;
            background-color: white;
        }
        .column select {
