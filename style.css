@@ -15,6 +15,7 @@
            position: fixed;
            top: 0;
            font-family: 'Titillium Web', sans-serif;
+           margin: auto;
        }
        .bar a {
            float: left;
@@ -40,7 +41,7 @@
 
 /* This adjusts the background and overall alignment of components */
        body {
-           margin-top: 100px;
+           margin-top: 150px;
            height: 100vh;
            justify-content: center;
            align-items: center;
