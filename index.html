@@ -33,9 +33,11 @@
  
 <!--Start top menu bar-->
 <header>
+
     <div class="bar">
       <a href="#title">Siren's Signal</a>
     </div>
+
     <div class="dropdown">
       <button class="dropbtn">☰</button>
       <div class="dropdown-content">
@@ -44,19 +46,13 @@
         <a href="#">Settings</a>
       </div>
     </div>
+
 </header>
 <!--End of top menu bar-->
  
 <body>
 
-<div id="player" style="position:relative; top: 590px; left: 15px;">
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1xzi1Jcr7mEi9K2RfzLOqS?utm_source=generator" 
-    width="350" height="150" allowfullscreen="" 
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-    loading="lazy">
-  </iframe>
-  </div>
-	
+
  <div class = "wrapper">
     <div id="date">month day,year</div>
     <div id="clock">00:00:00</div>
@@ -221,7 +217,15 @@
      <button id = 'setButton' onclick='setAlarm()'>Set Alarm</button>
      <button id = 'clearButton' onclick='clearAlarm()'>Clear Alarm</button>
 </div>
-   
+
+     <div id="player" style="position: fixed; left: 10px; bottom: 0px; top: 590px;">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1xzi1Jcr7mEi9K2RfzLOqS?utm_source=generator" 
+    width="350" height="150" allowfullscreen="" 
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+    loading="lazy">
+  </iframe>
+  </div>
+
    <script type='text/javascript' src='clock.js'></script>
 </body>
  
