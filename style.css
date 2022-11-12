@@ -40,11 +40,6 @@
            font-weight: 200px;
        }
 
-       /* .bar:not(:hover) {
-        opacity: 0;
-        visibility: hidden;
-       } */
-
        .dropbtn {
         background-color: white;
         color: black;
@@ -53,7 +48,7 @@
         border: none;
         cursor: pointer;
         float: right;
-        position: absolute;
+        position: fixed;
         box-sizing: border-box;
         right: 0px;
         top: 0px;
@@ -145,7 +140,7 @@
 
 /* This adjusts the clock spcifically */
        #clock {
-           font-size: 150px;
+           font-size: 130px;
            font-weight: 200;
            font-family: 'Lora', sans-serif;
            padding-left: 70px;
