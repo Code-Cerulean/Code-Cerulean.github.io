@@ -10,7 +10,8 @@ var sound = new Audio("https://www.freespecialeffects.co.uk/soundfx/animals/duck
             let hours =time.getHours();
             let mins = time.getMinutes();
             let secs = time.getSeconds();
-            var am_pm = "AM";
+            //var am_pm = "AM";
+	    var am_pm = time.getHours() >= 12 ? ' PM' : ' AM';
             
             //Convert clock to 12 hr format
             if (hours > 12) {
