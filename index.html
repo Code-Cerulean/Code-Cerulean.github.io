@@ -13,14 +13,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?&family=Spectral:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <meta name="color:Button" content=""/>
 </head>
  
 <!--Start top menu bar-->
 <header>
     <div class="bar">
       <a href="#title">Siren's Signal</a>
-      <a href="#menu" class="split">☰</a>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">☰</button>
+      <div class="dropdown-content">
+        <a href="#">Calender</a>
+        <a href="#">Planner</a>
+        <a href="#">Settings</a>
+      </div>
     </div>
 </header>
 <!--End of top menu bar-->
@@ -29,8 +51,8 @@
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1xzi1Jcr7mEi9K2RfzLOqS?utm_source=generator" width="100%" height="352" frameBorder="0" 
     allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
  <div class = "wrapper">
-    <div id="date">mon day,year</div>
-    <div id="clock">8:10:45</div>
+    <div id="date">month day,year</div>
+    <div id="clock">00:00:00</div>
   <input onchange = "setAlarmTime(this.value)" name = "alarmTime" type="datetime-local">
  <div class = "content">
     <div class = "column">
@@ -182,6 +204,7 @@
 		</div>
    <div class = "column">
      <select id = "ampm"> 
+      <option value = "AM / PM" selected hidden>AM / PM</option>
       <option value = "AM">AM</option>
       <option value = "PM">PM</option>
      </select>
