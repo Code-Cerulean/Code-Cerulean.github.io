@@ -71,11 +71,27 @@
 
   <script>
   $(document).ready(function() {
-      $('#calendar').evoCalendar({
-        // settingName: settingValue
-      })
+    $('#calendar').evoCalendar({
+        calendarEvents: [
+        {
+          id: 'bHay68s', // Event's ID (required)
+          name: "Thanksgiving", // Event name (required)
+          date: "November/24/2022", // Event date (required)
+          type: "holiday", // Event type (required)
+          everyYear: true // Same event every year (optional)
+        },
+        {
+          name: "Holiday",
+          badge: "11/23 - 11/27", // Event badge (optional)
+          date: ["November/23/2022", "November/27/2022"], // Date range
+          description: "LSU issued break for Thanksgiving", // Event description (optional)
+          type: "event",
+          color: "#63d867" // Event custom color (optional)
+        }
+      ]
+    })
   })
-  </script>
+  </script
 
 </body>
  
