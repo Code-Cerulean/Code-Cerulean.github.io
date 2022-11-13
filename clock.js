@@ -1,22 +1,6 @@
 var sound = new Audio("https://www.freespecialeffects.co.uk/soundfx/animals/duck1.wav");
 		sound.loop = true;
 
-curl --request PUT \
-  --url https://open.spotify.com/embed/player/play \
-  --header 'Authorization: ' \
-  --header 'Content-Type: application/json' \
-  --data '{
-  "context_uri": "spotify:playlist:0VdFQqzv7BbuvNLdiy7oYS",
-  "offset": {
-    "position": 5
-  },
-  "position_ms": 0
-}'
-curl --request PUT \
-  --url https://api.spotify.com/embed/player/pause \
-  --header 'Authorization: ' \
-  --header 'Content-Type: application/json'
-
         //updates clock every second
         setInterval(showTime, 1000);
         
@@ -131,11 +115,11 @@ curl --request PUT \
         
            //sounds the set alarm
           if (alarmTime == currentTime){
-		PUT https://api.spotify.com/embed/player/play
+		//PUT https://api.spotify.com/embed/player/play
 		const spotifyEmbedWindow = document.querySelector('iframe[src*="https://open.spotify.com/embed/playlist/0VdFQqzv7BbuvNLdiy7oYS"]').contentWindow;
                 spotifyEmbedWindow.postMessage({command: 'toggle'}, '*');
                 //console.log('time');
-		//sound.play();
+		sound.play();
 	  }
      },1000);
 
@@ -147,9 +131,9 @@ curl --request PUT \
 	document.getElementById('alarmMins').disabled = false;
         document.getElementById('alarmSecs').disabled = false;
 	document.getElementById('ampm').disabled = false;
-	 PUT https://api.spotify.com/embed/player/pause
-	//sound.pause();
-        //sound.currentTime = 0;
+	 //PUT https://api.spotify.com/embed/player/pause
+	sound.pause();
+        sound.currentTime = 0;
    }
 
 
