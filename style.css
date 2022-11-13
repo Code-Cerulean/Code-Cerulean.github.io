@@ -114,7 +114,7 @@
            height: 100vh;
            justify-content: center;
            align-items: center;
-           background: #d3e0f2;
+           background: linear-gradient(45deg, white, #d3e0f2); 
            overflow: hidden;
        }
 
