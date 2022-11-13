@@ -35,7 +35,7 @@
            padding: 14px 16px;
            text-decoration: none; 
            letter-spacing: 2px;
-           font-family: 'Playfair Display', sans-serif;
+           font-family: 'Roboto', sans-serif;
            font-size: 17px;
            font-weight: 200px;
        }
@@ -46,7 +46,7 @@
         padding: 16px;
         font-size: 15px;
         border: none;
-        cursor: pointer;
+        cursor: auto;
         float: right;
         position: fixed;
         box-sizing: border-box;
@@ -72,11 +72,11 @@
         color: rgba(23, 23, 23, 0.614);
         padding: 12px 14px;
         text-decoration: none;
-        font-family: 'Playfair Display', sans-serif;
         display: block;
         text-align: center;
+        font-family: 'Work Sans', sans-serif;
         text-transform: uppercase;
-         letter-spacing: 0.1em;
+         letter-spacing: 0.05em;
          line-height: 150%;
          font-weight: bold;
          
