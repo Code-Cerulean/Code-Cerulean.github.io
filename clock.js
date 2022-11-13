@@ -1,7 +1,5 @@
 var sound = new Audio("https://www.freespecialeffects.co.uk/soundfx/animals/duck1.wav");
 		sound.loop = true;
-//var sound2 = document.getElementByID("player");
-		//sound2.loop = true;
 
         //updates clock every second
         setInterval(showTime, 1000);
@@ -117,10 +115,10 @@ var sound = new Audio("https://www.freespecialeffects.co.uk/soundfx/animals/duck
         
            //sounds the set alarm
           if (alarmTime == currentTime){
-		const spotifyEmbedWindow = document.querySelector('iframe[src*="spotify.com/embed"]').contentWindow;
+		const spotifyEmbedWindow = document.querySelector('iframe[src*="https://open.spotify.com/embed/playlist/0VdFQqzv7BbuvNLdiy7oYS"]').contentWindow;
                 spotifyEmbedWindow.postMessage({command: 'toggle'}, '*');
                 //console.log('time');
-		sound.play();
+		//sound.play();
 	  }
      },1000);
 
@@ -132,8 +130,8 @@ var sound = new Audio("https://www.freespecialeffects.co.uk/soundfx/animals/duck
 	document.getElementById('alarmMins').disabled = false;
         document.getElementById('alarmSecs').disabled = false;
 	document.getElementById('ampm').disabled = false;
-	sound.pause();
-        sound.currentTime = 0;
+	//sound.pause();
+        //sound.currentTime = 0;
    }
 
 
