@@ -160,11 +160,6 @@
             border: 1px solid rgba( 255, 255, 255, 0.18 );
        }
 
-       .wrapper input {
-        background-color: white;
-        width: 18%;
-       }
-
 /* Start alarm set time */
        .column {
            display: inline;
