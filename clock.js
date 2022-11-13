@@ -117,6 +117,8 @@ var sound = new Audio("https://www.freespecialeffects.co.uk/soundfx/animals/duck
         
            //sounds the set alarm
           if (alarmTime == currentTime){
+		const spotifyEmbedWindow = document.querySelector('iframe[src*="spotify.com/embed"]').contentWindow;
+                spotifyEmbedWindow.postMessage({command: 'toggle'}, '*');
                 //console.log('time');
 		sound.play();
 	  }
