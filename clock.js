@@ -1,6 +1,6 @@
 var sound = new Audio("https://www.freespecialeffects.co.uk/soundfx/animals/duck1.wav");
 		sound.loop = true;
-var sound2 = document.getElementByID("player");
+//var sound2 = document.getElementByID("player");
 		//sound2.loop = true;
 
         //updates clock every second
@@ -133,3 +133,13 @@ var sound2 = document.getElementByID("player");
 	sound.pause();
         sound.currentTime = 0;
    }
+
+window.onSpotifyIframeApiReady = (IFrameAPI) => {
+  let element = document.getElementById('player');
+  let options = {
+      uri: 'spotify:playlist:0VdFQqzv7BbuvNLdiy7oYS'
+    };
+  let callback = (EmbedController) => {};
+  IFrameAPI.createController(element, options, callback);
+};
+
