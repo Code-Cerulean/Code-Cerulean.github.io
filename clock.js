@@ -1,7 +1,7 @@
 var sound = new Audio("https://www.freespecialeffects.co.uk/soundfx/animals/duck1.wav");
 		sound.loop = true;
-//var sound2 = new Audio(document.getElementByID("player");
-		      // sound2.loop = true;
+var sound2 = document.getElementByID("player");
+		//sound2.loop = true;
 
         //updates clock every second
         setInterval(showTime, 1000);
