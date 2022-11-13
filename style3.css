@@ -1,0 +1,128 @@
+<style>
+
+:root {
+    --button-color: #163372;
+  }
+
+/* Overall website */
+       * {
+           margin: 0;
+           padding: 0;
+           border: 0;
+       }
+
+/* Start of Header Bar */
+       .bar {
+           width: 100%;
+           float: none;
+           background: linear-gradient(180deg, rgba(255, 255, 255, 0.988), rgba(255, 255, 255, 0.5) 100%);
+           overflow: hidden;
+            position: fixed;
+            box-sizing: border-box;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+         text-transform: uppercase;
+         letter-spacing: 0.1em;
+         line-height: 150%;
+         font-weight: bold;
+       }
+       .bar a {
+           float: left;
+           color: black;
+           text-align: center;
+           padding: 14px 16px;
+           text-decoration: none; 
+           letter-spacing: 2px;
+           font-family: 'Playfair Display', sans-serif;
+           font-size: 17px;
+           font-weight: 200px;
+       }
+
+       .dropbtn {
+        background-color: white;
+        color: black;
+        padding: 16px;
+        font-size: 15px;
+        border: none;
+        cursor: pointer;
+        float: right;
+        position: fixed;
+        box-sizing: border-box;
+        right: 0px;
+        top: 0px;
+        }
+      
+      .dropdown-content {
+        float: right;
+        position: fixed;
+        box-sizing: border-box;
+        right: 0px;
+        top: 52px;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 2;
+        display: block;
+        visibility: hidden;
+      }
+      
+      .dropdown-content a {
+        color: rgba(23, 23, 23, 0.614);
+        padding: 12px 14px;
+        text-decoration: none;
+        font-family: 'Playfair Display', sans-serif;
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+         letter-spacing: 0.1em;
+         line-height: 150%;
+         font-weight: bold;
+         
+      }
+
+      .dropdown .dropbtn:hover {
+        background-color: #21304f;
+        color: white;
+        transition: all 0.5s;
+       }
+
+       .dropdown:hover .dropdown-content {
+        visibility: visible;
+        animation: fade 0.7s;
+      }
+      
+      .dropdown-content a:hover {
+        background-color: #dbdbdbda;
+        transition: all 0.7s;
+    } 
+    
+    @keyframes fade {
+        0% {
+            opacity: 0;
+        }
+    
+        100% {
+            opacity: 1;
+        }
+    }
+/* End of Header Bar */    
+
+/* This adjusts the background and overall alignment of components */
+       body {
+           width: 100%;
+           height: 100%;
+           background: linear-gradient(45deg, rgb(162, 174, 210), #6a82a0);
+           margin:0;
+           padding:0;
+           text-align:center;
+       }
+
+       .Scp{
+        margin: auto;
+        top: 150px;
+        }
+
+
+ </style>
