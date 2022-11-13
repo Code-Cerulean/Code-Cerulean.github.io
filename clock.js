@@ -139,7 +139,12 @@ window.onSpotifyIframeApiReady = (IFrameAPI) => {
   let options = {
       uri: 'spotify:playlist:0VdFQqzv7BbuvNLdiy7oYS'
     };
-  let callback = (EmbedController) => {};
+  let callback = (EmbedController) => {
+  playlist => {
+              playlist.addEventListener('click', () => {
+                EmbedController.loadUri(playlist.dataset.spotifyId)
+              });
+  };
   IFrameAPI.createController(element, options, callback);
 };
 
