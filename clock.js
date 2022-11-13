@@ -134,17 +134,5 @@ var sound = new Audio("https://www.freespecialeffects.co.uk/soundfx/animals/duck
         sound.currentTime = 0;
    }
 
-window.onSpotifyIframeApiReady = (IFrameAPI) => {
-  let element = document.getElementById('player');
-  let options = {
-      uri: 'spotify:playlist:0VdFQqzv7BbuvNLdiy7oYS'
-    };
-  let callback = (EmbedController) => {
-  playlist => {
-              playlist.addEventListener('click', () => {
-                EmbedController.loadUri(playlist.dataset.spotifyId)
-              });
-  };
-  IFrameAPI.createController(element, options, callback);
-};
+
 
