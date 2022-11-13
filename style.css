@@ -156,6 +156,11 @@
            display: inline;
        }
 
+       .wrapper input {
+        background-color: white;
+        width: 18%;
+       }
+
 /* Start alarm set time */
        .column {
            display: inline;
