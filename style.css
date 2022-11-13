@@ -74,6 +74,7 @@
         text-decoration: none;
         display: block;
         text-align: center;
+        font-family: 'Playfair Display', sans-serif;
         text-transform: uppercase;
          letter-spacing: 0.1em;
          line-height: 150%;
@@ -114,7 +115,7 @@
            height: 100vh;
            justify-content: center;
            align-items: center;
-           background: linear-gradient(45deg, white, #d3e0f2); 
+           background: linear-gradient(45deg, white, #435874); 
            overflow: hidden;
        }
 
