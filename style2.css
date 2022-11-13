@@ -63,7 +63,7 @@
         background-color: #f9f9f9;
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
+        z-index: 2;
         display: block;
         visibility: hidden;
       }
@@ -72,6 +72,7 @@
         color: rgba(23, 23, 23, 0.614);
         padding: 12px 14px;
         text-decoration: none;
+        font-family: 'Playfair Display', sans-serif;
         display: block;
         text-align: center;
         text-transform: uppercase;
@@ -109,14 +110,61 @@
 /* End of Header Bar */    
 
 /* This adjusts the background and overall alignment of components */
-       body {
-           margin-top: 125px;
-           height: 100vh;
-           justify-content: center;
-           align-items: center;
-           background: linear-gradient(45deg, white, #d3e0f2);
-           overflow: hidden;
+       .bg {
+           width: 100%;
+           height: 100%;
+           background: linear-gradient(45deg, rgb(162, 174, 210), #edf5ff);
        }
 
+/* This adjusts the calendar */
+
+       #calendar {
+        width: 80%;
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+       }
+
+       button.btn-action {
+        position: relative;
+        z-index: 2; 
+        top: -100px;
+        right: -1020px;
+        height: 25px;
+        width: 150px;
+        color: #755eb5;
+        font-family: 'Titillium Web', sans-serif;
+        border: none;
+        background-color: white;
+        border-radius: 8px;
+        font-size: 15px;
+        cursor: pointer;
+        -webkit-box-shadow: 0 10px 20px -5px rgba(145, 150, 160, 0.65);
+        box-shadow: 0 10px 20px -5px rgba(148, 153, 161, 0.65);
+        display: inline;
+        letter-spacing: .5px;
+        align-items: center;
+       }
+
+       button.btn-action:hover {
+        background-color: #454b7e;
+        color: white;
+        transition: all 0.5s ease;
+       }
+
+       button.btn-action:disabled {
+        background-color: #e4e4e4;
+        border-color: #e4e4e4;
+        -webkit-transform: scale(.9);
+        -ms-transform: scale(.9);
+        transform: scale(.9);
+        cursor: not-allowed;
+        }
+
+        button.btn-action.active {
+            background-color: #9886c7;
+            color: #fff;
+        }
 
  </style>
