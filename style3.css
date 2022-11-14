@@ -46,7 +46,6 @@
     /* Dropdown Button */
        .dropbtn {
            background-color: transparent;
-           border: 1px solid white;
            border-radius: 5px;
            margin: 4px;
            margin-bottom: 0px;
@@ -54,12 +53,13 @@
            padding: 5px 14px 13px;
            font-size: 22px;
            border: none;
-           cursor: pointer;
+           cursor: default;
            float: right;
            position: fixed;
            box-sizing: border-box;
            right: 0px;
            top: 0px;
+           transition: color 0.5s linear;
         }
 
    /* Dropdown Content */
@@ -91,9 +91,8 @@
       }
 
    /* Hover Options */
-      .dropdown .dropbtn:hover {
+      .dropdown:hover  .dropbtn{
            color: #a6a6a6;
-           transition: color 0.5s;
        }
        .dropdown:hover .dropdown-content {
            visibility: visible;
