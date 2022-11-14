@@ -30,27 +30,17 @@
        }
 
     /* Website Name */
-       #icon.material-symbols-outlined {
-            color: black;
-            font-size: 22px;
-            font-variation-settings:
-             'FILL' 0,
-             'wght' 400,
-             'GRAD' 0
-       }
-        .bar a {
+       .bar a {
            float: left;
            color: black;
-           padding-top: 14px;
-           padding-bottom: 14px;
-           padding-left: 14px;
-           cursor: default;
+           text-align: center;
+           padding: 14px 16px;
            text-decoration: none; 
-           letter-spacing: 3px;
+           letter-spacing: 2px;
+           font-family: 'Roboto', sans-serif;
            font-size: 17px;
            font-weight: 600;
-           font-family: 'Roboto', sans-serif;
-           text-align: center;
+           cursor: default;
        }
 
     /* Dropdown Button */
@@ -73,19 +63,19 @@
         }
 
    /* Dropdown Content */
-      .dropdown-content {
-           float: right;
-           position: fixed;
-           right: 45px;
-           top: 13px;
-           z-index: -1;
-           opacity: 0;
-           display: block;
-           transition: all 0.7s;
-           margin: 6px;
-           margin-top: 0px;
-           margin-right: 10px;
-      }
+     .dropdown-content {
+          float: right;
+          position: fixed;
+          right: 45px;
+          top: 13px;
+          z-index: -1;
+          opacity: 0;
+          display: block;
+          transition: all 0.7s;
+          margin: 6px;
+          margin-top: 0px;
+          margin-right: 10px;
+     }
       .dropdown-content a {
            color: white;
            padding: 12px 10px;
@@ -180,55 +170,6 @@
         button.btn-action.active {
             background-color: #8696c7;
             color: #fff;
-        }
-
-        .addMenu {
-            padding: 0 250px;
-            display: flex;
-            flex-direction: column;
-        }
-    
-        #box {
-            position: fixed;
-            left: 400px;
-            bottom: 2px;
-            top: 790px;
-            padding-left: 50px;
-            padding-right: 50px;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            width: 610px;
-            margin: 10px;
-            display: inline;
-            background: #a5b2ff;
-            backdrop-filter: blur( 10px );
-            -webkit-backdrop-filter: blur( 10px );
-            border-radius: 15px;
-            border: 2px solid rgba(38, 0, 255, 0.18);
-        }
-        
-        #name {
-            position: fixed;
-            left: 450px;
-            top: 810px;
-            font-family: 'Titillium Web', sans-serif;
-            font-size: 15px;
-        }
-
-        #description {
-            position: fixed;
-            left: 625px;
-            top: 810px;
-            font-family: 'Titillium Web', sans-serif;
-            font-size: 15px;
-        }
-
-        #color {
-            position: fixed;
-            left: 875px;
-            top: 810px;
-            font-family: 'Titillium Web', sans-serif;
-            font-size: 15px;
         }
 
  </style>
