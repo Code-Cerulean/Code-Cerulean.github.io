@@ -30,17 +30,27 @@
        }
 
     /* Website Name */
-       .bar a {
+       #icon.material-symbols-outlined {
+            color: black;
+            font-size: 22px;
+            font-variation-settings:
+             'FILL' 0,
+             'wght' 400,
+             'GRAD' 0
+       }
+        .bar a {
            float: left;
            color: black;
-           text-align: center;
-           padding: 14px 16px;
+           padding-top: 14px;
+           padding-bottom: 14px;
+           padding-left: 14px;
+           cursor: default;
            text-decoration: none; 
-           letter-spacing: 2px;
-           font-family: 'Roboto', sans-serif;
+           letter-spacing: 3px;
            font-size: 17px;
            font-weight: 600;
-           cursor: default;
+           font-family: 'Roboto', sans-serif;
+           text-align: center;
        }
 
     /* Dropdown Button */
