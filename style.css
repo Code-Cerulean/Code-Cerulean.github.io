@@ -66,9 +66,8 @@
       .dropdown-content {
            float: right;
            position: fixed;
-           right: 13px;
+           right: 45px;
            top: 13px;
-           min-width: 160px;
            z-index: -1;
            opacity: 0;
            display: block;
