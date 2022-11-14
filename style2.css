@@ -152,36 +152,35 @@
             top: 52%;
             left: 50%;
             transform: translate(-50%,-50%);
-       }
-
-       button.btn-action {
-            position: relative;
-            z-index: 2; 
-            top: -100px;
-            right: -1032px;
-            height: 25px;
-            width: 150px;
-            color: #5e6cb5;
-            font-family: 'Titillium Web', sans-serif;
-            border: none;
-            background-color: white;
-            border-radius: 8px;
-            font-size: 15px;
-            cursor: pointer;
             -webkit-box-shadow: 0 10px 20px -5px rgba(145, 150, 160, 0.65);
             box-shadow: 0 10px 20px -5px rgba(148, 153, 161, 0.65);
-            display: inline;
-            letter-spacing: .5px;
-            align-items: center;
        }
 
-       button.btn-action:hover {
+       .calendar-events > .event-buttons > button {
+          color: #5e6cb5;
+          font-family: 'Titillium Web', sans-serif;
+          border: none;
+          background-color: rgb(230, 230, 230);
+          border-radius: 8px;
+          font-size: 15px;
+          cursor: pointer;
+          -webkit-box-shadow: 0 10px 20px -5px rgba(145, 150, 160, 0.65);
+          box-shadow: 0 10px 20px -5px rgba(148, 153, 161, 0.65);
+          height: 25px;
+          width: 150px;
+          display: inline;
+          letter-spacing: .5px;
+          position: relative;
+          margin: 340px 10px 0 10px;
+      }
+
+      .calendar-events > .event-buttons > button:hover {
             background-color: #454b7e;
             color: white;
             transition: all 0.5s ease;
        }
 
-       button.btn-action:disabled {
+       /* button.btn-action:disabled {
             background-color: #e4e4e4;
             border-color: #e4e4e4;
             -webkit-transform: scale(.9);
@@ -193,6 +192,6 @@
         button.btn-action.active {
             background-color: #8696c7;
             color: #fff;
-        }
+        } */
 
  </style>
