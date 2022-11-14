@@ -4,54 +4,52 @@
     --button-color: #163372;
   }
 
-/* Overall website */
-       * {
-           margin: 0;
-           padding: 0;
-           border: 0;
-       }
+     /* Overall website */
+     * {
+          margin: 0;
+          padding: 0;
+          border: 0;
+     }
 
-/* Start of Header Bar */
-       .bar {
-            width: 100%;
-            float: none;
-            background: transparent;
-            overflow: hidden;
-            position: fixed;
-            box-sizing: border-box;
-            top: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            line-height: 150%;
-            font-weight: bold;
-       }
+     /* Website Icon */
+     .icon span{
+               position: fixed;
+               left: 10px;
+               top: 13.5px;
+          }
 
-    /* Website Name */
-       #icon.material-symbols-outlined {
-            color: black;
-            font-size: 22px;
-            font-variation-settings:
-             'FILL' 0,
-             'wght' 400,
-             'GRAD' 0
-       }
-        .bar a {
-           float: left;
-           color: black;
-           padding-top: 14px;
-           padding-bottom: 14px;
-           padding-left: 14px;
-           cursor: default;
-           text-decoration: none; 
-           letter-spacing: 3px;
-           font-size: 17px;
-           font-weight: 600;
-           font-family: 'Roboto', sans-serif;
-           text-align: center;
-       }
+     /* Start of Header Bar */
+     .bar {
+          width: 100%;
+          float: none;
+          background: transparent;
+          overflow: hidden;
+          position: fixed;
+          box-sizing: border-box;
+          top: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          line-height: 150%;
+          font-weight: bold;
+     }
+
+     /* Website Name */
+     .bar a {
+          float: left;
+          margin-left: 27px;
+          color: black;
+          text-align: center;
+          padding: 14px 14px;
+          text-decoration: none; 
+          letter-spacing: 2px;
+          font-family: 'Roboto', sans-serif;
+          font-size: 17px;
+          font-weight: 600;
+          cursor: default;
+     }
 
     /* Dropdown Button */
        .dropbtn {
