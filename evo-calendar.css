@@ -30,8 +30,10 @@ input:focus, textarea:focus, button:focus {
     background-color: #fbfbfb;
     color: #5a5a5a;
     width: 100%;
-    -webkit-box-shadow: 0 10px 50px -20px #3a4980, 20px -20px 50px -20px #7d8292;
-            box-shadow: 0 10px 50px -20px #3a4980, 20px -20px 50px -20px #7d8292;
+    /* -webkit-box-shadow: 0 10px 50px -20px #3a4980, 20px -20px 50px -20px #7d8292;
+            box-shadow: 0 10px 50px -20px #3a4980, 20px -20px 50px -20px #7d8292; */
+    -webkit-box-shadow: 0 10px 50px -20px repeating-linear-gradient(66deg, rgb(191, 191, 191), #525a88, #5464bc);
+            box-shadow: 0 10px 50px -20px repeating-linear-gradient(66deg, rgb(151, 151, 151), #525a88, #5464bc);
     margin: 0 auto;
     overflow: hidden;
     z-index: 1;
