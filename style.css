@@ -6,51 +6,52 @@
 
      /* Overall website */
      * {
-          margin: 0;
-          padding: 0;
-          border: 0;
-     }
+        margin: 0;
+        padding: 0;
+        border: 0;
+   }
 
-     /* Website Icon */
-     .icon span{
-               position: fixed;
-               left: 10px;
-               top: 13.5px;
-          }
+   /* Website Icon */
+   .icon span{
+             position: fixed;
+             left: 10px;
+             top: 13.5px;
+        }
 
-     /* Start of Header Bar */
-     .bar {
-          width: 100%;
-          float: none;
-          background: transparent;
-          overflow: hidden;
-          position: fixed;
-          box-sizing: border-box;
-          top: 0;
-          left: 0;
-          right: 0;
-          margin: auto;
-          text-transform: uppercase;
-          letter-spacing: 0.1em;
-          line-height: 150%;
-          font-weight: bold;
-     }
+   /* Start of Header Bar */
+   .bar {
+        width: 100%;
+        float: none;
+        background: transparent;
+        overflow: hidden;
+        position: fixed;
+        box-sizing: border-box;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        line-height: 150%;
+        font-weight: bold;
+   }
 
-     /* Website Name */
-     .bar a {
-          float: left;
-          margin-left: 27px;
-          color: black;
-          text-align: center;
-          padding: 14px 14px;
-          text-decoration: none; 
-          letter-spacing: 2px;
-          font-family: 'Roboto', sans-serif;
-          font-size: 17px;
-          font-weight: 600;
-          cursor: default;
-     }
-       
+   /* Website Name */
+   .bar a {
+        float: left;
+        margin-left: 27px;
+        color: black;
+        text-align: center;
+        padding: 14px 14px;
+        text-decoration: none; 
+        letter-spacing: 2px;
+        font-family: 'Roboto', sans-serif;
+        
+        font-size: 17px;
+        font-weight: 600;
+        cursor: default;
+   }
+
     /* Dropdown Button */
        .dropbtn {
            background-color: transparent;
@@ -100,7 +101,6 @@
    /* Hover Options */
       .dropdown:hover  .dropbtn{
            color: #a6a6a6;
-           cursor: pointer;
        }
        .dropdown:hover .dropdown-content {
            visibility: visible;
@@ -109,8 +109,8 @@
            transition: all 0.7s;
       }
       .dropdown:not(:hover) .dropdown-content {
-           z-index: -1;
-           transition: all 0.7s;
+        z-index: -1;
+        transition: all 0.7s;
     }
       .dropdown-content a:hover {
            color: #a6a6a6;
@@ -120,14 +120,30 @@
 /* End of Header Bar */    
 
 /* This adjusts the background and overall alignment of components */
-       body {
-           margin-top: 125px;
-           height: 100vh;
-           justify-content: center;
-           align-items: center;
-           background: linear-gradient(45deg, white, #273062); 
-           overflow: hidden;
-       }
+        body {
+            margin-top: 125px;
+            justify-content: center;
+            align-items: center;
+            /* background: linear-gradient(45deg, white, #273062); */
+            overflow: hidden;
+            text-align: center;
+            background: repeating-linear-gradient(66deg, white, #525a88, #2e376b);
+            background-size: 400% 400%;
+            animation: gradient 20s ease infinite;
+            height: 100vh;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
 
 /* This adjusts the date and the time overall */
        .wrapper {
@@ -162,7 +178,7 @@
             margin: 25px;
             text-align: center;
             display: inline;
-            background: rgba( 255, 255, 255, 0.37 );
+            background: rgba( 255, 255, 255, 0.18 );
             box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
             backdrop-filter: blur( 4px );
             -webkit-backdrop-filter: blur( 4px );
@@ -208,11 +224,11 @@
            border: none;
            cursor: pointer;
            color: white;
-           margin-top: 15px;
            font-size: 15px;
            font-family: 'Montserrat', sans-serif;
            letter-spacing: 1px;
            padding: 17px 0;
+           margin: 15px 5px 0 5px;
            border-radius: 8px;
            background: black;
            display: inline;
