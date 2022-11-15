@@ -119,10 +119,6 @@ var sound = new Audio("https://open.spotify.com/track/6UelLqGlWMcVH1E5c4H7lY?si=
         
            //sounds the set alarm
           if (alarmTime == currentTime){
-		//PUT https://api.spotify.com/embed/player/play
-		const spotifyEmbedWindow = document.querySelector('iframe[src*="https://open.spotify.com/embed/playlist/0VdFQqzv7BbuvNLdiy7oYS"]').contentWindow;
-                spotifyEmbedWindow.postMessage({command: 'toggle'}, '*');
-                //console.log('time');
 		sound.play();
 	  }
      },1000);
