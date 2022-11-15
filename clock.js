@@ -130,11 +130,6 @@ var sound = new Audio("https://www.freespecialeffects.co.uk/soundfx/animals/duck
 	document.getElementById('alarmMins').disabled = false;
         document.getElementById('alarmSecs').disabled = false;
 	document.getElementById('ampm').disabled = false;
-	selectedHour = hr.options['Hours'].value;
-        selectedMin = min.options['Minutes'].value;
-        selectedSec = secs.options['Seconds'].value;
-        selectedAP = ap.options['AM/PM'].value;
-	 //PUT https://api.spotify.com/embed/player/pause
 	sound.pause();
         sound.currentTime = 0;
    }
