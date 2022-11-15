@@ -139,7 +139,7 @@ const UIController = (function() {
             detailDiv.innerHTML = '';
 
             const html = 
-            ``;
+            '';
 
             detailDiv.insertAdjacentHTML('beforeend', html)
         },
