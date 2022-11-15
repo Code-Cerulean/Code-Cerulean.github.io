@@ -140,9 +140,7 @@ const UIController = (function() {
 
             const html = 
             `
-            <div class="row col-sm-12 px-0">
-                <img src="${img}" alt="">        
-            </div>
+            
             <div class="row col-sm-12 px-0">
                 <label for="Genre" class="form-label col-sm-12">${title}:</label>
             </div>
