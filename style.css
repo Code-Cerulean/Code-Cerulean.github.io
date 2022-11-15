@@ -232,6 +232,7 @@
 
 
 /* This adjusts the buttons */
+
        .wrapper button#setButton, #clearButton {
            width: 197px;
            outline: none;
@@ -270,14 +271,28 @@
            transition: 0.5s;
        } 
 
+       .column form {
+        margin-left: 5px;
+       }
+
 /* This adjusts the songs list */
 
         .row {
-            margin-top: 50px;
-            /* background-color: black; */
-            font-weight: 500;
+            display: flex;
+            flex-direction: column; 
+            /* background: rgba( 255, 255, 255, 0.19 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.18 );
+            backdrop-filter: blur( 4px );
+            -webkit-backdrop-filter: blur( 4px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+            margin: auto;
+            width: 60%;
+            margin-top: 5%;
+            margin-bottom: 25px;
+            text-align: center;
+            position: relative;
         }
-
 
         .song-list a {
             text-decoration: none;
@@ -285,6 +300,11 @@
             font-size: 15px;
             font-family: 'Montserrat', sans-serif;
             display: block;
+            margin: 7px 0 7px 0;
+        }
+
+        .col-sm-6.px-0 {
+            margin: 10px 0 10px 0;
         }
 
         .row #song-detail {
@@ -303,6 +323,7 @@
             top: 320px;
         }
 
+        /* This adjusts the scrollbar */
         ::-webkit-scrollbar {
             width: 8px; 
             height: 20px;
