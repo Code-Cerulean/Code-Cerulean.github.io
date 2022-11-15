@@ -156,6 +156,16 @@
             box-shadow: 0 10px 20px -5px rgba(148, 153, 161, 0.65);
        }
 
+       .calendar-events {
+          display: table;
+       }
+
+       .calendar-events > .event-buttons {
+          display : table-row;
+          vertical-align : bottom;
+          height : 55px;
+       }
+
        .calendar-events > .event-buttons > button {
           color: #5e6cb5;
           font-family: 'Titillium Web', sans-serif;
@@ -171,7 +181,8 @@
           display: inline;
           letter-spacing: .5px;
           position: relative;
-          margin: 340px 10px 0 10px;
+          margin: 10px 10px 0 10px;
+          float: bottom;
       }
 
       .calendar-events > .event-buttons > button:hover {
