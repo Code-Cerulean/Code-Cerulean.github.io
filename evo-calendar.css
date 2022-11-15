@@ -273,7 +273,7 @@ tr.calendar-body .calendar-day .day[disabled] {
     right: 0;
     width: 400px;
     height: 100%;
-    padding: 70px 30px 60px 30px;
+    padding: 70px 30px 10px 30px;
     background-color: #fbfbfb;
     -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
@@ -410,6 +410,7 @@ tr.calendar-body .calendar-day .day[disabled] {
     position: relative;
     font-size: 22px;
     font-weight: 600;
+    text-align: center;
 }
 .event-container > .event-info > p.event-title > span {
     position: absolute;
