@@ -1,5 +1,9 @@
-var sound = new Audio("https://www.freespecialeffects.co.uk/soundfx/animals/duck1.wav");
+//var sound = new Audio("https://www.freespecialeffects.co.uk/soundfx/animals/duck1.wav");
+		//sound.loop = true;
+var sound = new Audio("https://open.spotify.com/track/6UelLqGlWMcVH1E5c4H7lY?si=b4e102f436c74ca2");
 		sound.loop = true;
+
+
 
         //updates clock every second
         setInterval(showTime, 1000);
