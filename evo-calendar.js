@@ -581,11 +581,16 @@
 
             // events
             markup += '<div class="calendar-events">'+
-                            '<div class="event-header"><p></p></div>'+
-                            '<div class="event-list"></div>'+
-                            '<div class="event-buttons"><button id="addBtn">ADD EVENT</button>'+
-                            '<button id="removeBtn">REMOVE EVENT</button></div>'+
-                        '</div>';
+                          '<div class="event-header"><p></p></div>'+
+                          '<div class="event-list"></div>'+
+                          
+
+
+                        '<div class="event-buttons">'+
+                            '<button id="addBtn" onclick="hideFunction()">ADD EVENT</button>'+
+                            '<button id="removeBtn" onclick="hideFunction()">REMOVE EVENT</button>'+
+                        '</div>'+
+                    '</div>';
 
             // --- Finally, build it now! --- //
             _.$elements.calendarEl.html(markup);
