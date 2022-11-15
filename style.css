@@ -296,7 +296,7 @@
         }
 
         /* This adjusts the spotify player */
-        .player {
+        #player {
             position: fixed; 
             left: 5px; 
             bottom: 0px; 
