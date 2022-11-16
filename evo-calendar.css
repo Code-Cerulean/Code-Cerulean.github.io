@@ -32,11 +32,12 @@ input:focus, textarea:focus, button:focus {
     width: 100%;
     /* -webkit-box-shadow: 0 10px 50px -20px #3a4980, 20px -20px 50px -20px #7d8292;
             box-shadow: 0 10px 50px -20px #3a4980, 20px -20px 50px -20px #7d8292; */
-    -webkit-box-shadow: 0 10px 50px -20px repeating-linear-gradient(66deg, rgb(191, 191, 191), #525a88, #5464bc);
-            box-shadow: 0 10px 50px -20px repeating-linear-gradient(66deg, rgb(151, 151, 151), #525a88, #5464bc);
+    -webkit-box-shadow: 0 20px 50px -20px repeating-linear-gradient(66deg, rgb(191, 191, 191), #525a88, #5464bc);
+            box-shadow: 0 20px 50px -20px repeating-linear-gradient(66deg, rgb(151, 151, 151), #525a88, #5464bc);
     margin: 0 auto;
     overflow: hidden;
     z-index: 1;
+    border-radius: 10px;
 }
 
 .calendar-sidebar {
@@ -80,6 +81,7 @@ input:focus, textarea:focus, button:focus {
     cursor: pointer;
     -webkit-box-shadow: 5px 0 18px -3px #3a4980;
             box-shadow: 5px 0 18px -3px #3a4980;
+            border-radius: 0 0 10px 0;
 }
 
 .calendar-sidebar > .calendar-year {
@@ -315,6 +317,7 @@ tr.calendar-body .calendar-day .day[disabled] {
     -webkit-box-shadow: 5px 0 18px -3px #3a4980;
             box-shadow: 5px 0 18px -3px #3a4980;
     z-index: 1;
+    border-radius: 0 0 0 10px;
 }
 .event-list::after {
     content: "";
