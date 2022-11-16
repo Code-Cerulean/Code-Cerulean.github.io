@@ -1,24 +1,36 @@
 <style>
 
 :root {
-    --button-color: #163372;
-  }
+     --button-color: #163372;
+}
 
-     /* Overall website */
+/* Overall website */
      * {
           margin: 0;
           padding: 0;
           border: 0;
      }
 
+     #link {
+          position: fixed;
+          top: 0px;
+          left: 0px;
+          z-index: 20;
+          border-color: #ffffff;
+          width: 215px;
+          height: 35px;
+          color: transparent;
+      }
+
      /* Website Icon */
      .icon span{
-               position: fixed;
-               left: 10px;
-               top: 13.5px;
-          }
+          position: fixed;
+          left: 10px;
+          top: 13.5px;
+          animation: shimmer 20s ease infinite;
+     }
 
-     /* Start of Header Bar */
+/* Start of Header Bar */
      .bar {
           width: 100%;
           float: none;
@@ -49,33 +61,53 @@
           font-size: 17px;
           font-weight: 600;
           cursor: default;
+          animation: shimmer 20s ease infinite;
      }
 
-    /* Dropdown Button */
-       .dropbtn {
-           background-color: transparent;
-           border-radius: 5px;
-           margin: 4px;
-           margin-bottom: 0px;
-           color: white;
-           padding: 5px 14px 13px;
-           font-size: 22px;
-           border: none;
-           cursor: default;
-           float: right;
-           position: fixed;
-           box-sizing: border-box;
-           right: 0px;
-           top: 0px;
-           transition: color 0.5s linear;
-        }
+     @keyframes shimmer {
+         0% {
+             color: black;
+         }
+         25% {
+             color: white;
+         }
+         50% {
+             color: white;
+         }
+         75% {
+             color: white;
+         }
+         100% {
+             color: black;
+         }
+     }
 
-   /* Dropdown Content */
+/* Dropdown Button */
+     .dropbtn {
+          background-color: transparent;
+          border-radius: 5px;
+          margin: 4px;
+          margin-bottom: 0px;
+          color: white;
+          padding: 5px 14px 13px;
+          font-size: 22px;
+          border: none;
+          cursor: default;
+          float: right;
+          position: fixed;
+          box-sizing: border-box;
+          right: 0px;
+          top: 0px;
+          transition: color 0.5s linear;
+     }
+ 
+/* Dropdown Content */
      .dropdown-content {
           float: right;
           position: fixed;
-          right: 45px;
+          right: 13px;
           top: 13px;
+          min-width: 160px;
           z-index: -1;
           opacity: 0;
           display: block;
@@ -84,122 +116,155 @@
           margin-top: 0px;
           margin-right: 10px;
      }
-      .dropdown-content a {
-           color: white;
-           padding: 12px 10px;
-           text-decoration: none;
-           display: inline;
-           text-align: center;
-           font-family: 'Montserrat', sans-serif;
-            letter-spacing: 0.1em;
-            line-height: 150%;
-            font-size: 15px;
-            font-weight: 400;
-      }
+     .dropdown-content a {
+          color: white;
+          padding: 12px 10px;
+          text-decoration: none;
+          display: inline;
+          text-align: center;
+          font-family: 'Montserrat', sans-serif;
+          letter-spacing: 0.1em;
+          line-height: 150%;
+          font-size: 15px;
+          font-weight: 400;
+     }
 
-   /* Hover Options */
-      .dropdown:hover  .dropbtn{
-           color: #a6a6a6;
-       }
-       .dropdown:hover .dropdown-content {
-           visibility: visible;
-           z-index: 1;
-           opacity: 1;
-           transition: all 0.7s;
-      }
-      .dropdown:not(:hover) .dropdown-content {
-        z-index: -1;
-        transition: all 0.7s;
-    }
-      .dropdown-content a:hover {
-           color: #a6a6a6;
-           transition: all 0.7s;
-    } 
+/* Hover Options */
+     .dropdown:hover  .dropbtn{
+          color: #a6a6a6;
+     }
+     .dropdown:hover .dropdown-content {
+          visibility: visible;
+          z-index: 1;
+          opacity: 1;
+          transition: all 0.7s;
+     }
+     .dropdown:not(:hover) .dropdown-content {
+          z-index: -1;
+          transition: all 0.7s;
+     }
+     .dropdown-content a:hover {
+          color: #a6a6a6;
+          transition: all 0.7s;
+     } 
 
-/* End of Header Bar */    
+/* End of Header Bar */   
 
 /* This adjusts the background and overall alignment of components */
-          body {
-               justify-content: center;
-               align-items: center;
-               /* background: linear-gradient(45deg, white, #273062); */
-               overflow: hidden;
-               text-align: center;
-               background: repeating-linear-gradient(66deg, white, #525a88, #5464bc);
-               background-size: 400% 400%;
-               animation: gradient 20s ease infinite;
-               height: 100vh;
-               overflow: hidden;
-          }
+     body {
+          justify-content: center;
+          align-items: center;
+          /* background: linear-gradient(45deg, white, #273062); */
+          overflow: hidden;
+          text-align: center;
+          background: repeating-linear-gradient(66deg, white, #525a88, #5464bc);
+          background-size: 400% 400%;
+          animation: gradient 20s ease infinite;
+          height: 100vh;
+          overflow: hidden;
+     }
 
-          @keyframes gradient {
-               0% {
-               background-position: 0% 50%;
-               }
-               50% {
-               background-position: 100% 50%;
-               }
-               100% {
-               background-position: 0% 50%;
-               }
+     @keyframes gradient {
+          0% {
+          background-position: 0% 50%;
           }
+          50% {
+          background-position: 100% 50%;
+          }
+          100% {
+          background-position: 0% 50%;
+          }
+     }
 
 /* This adjusts the calendar */
 
-       #calendar {
-            width: 80%;
-            position: fixed;
-            top: 52%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            -webkit-box-shadow: 0 10px 20px -5px rgba(145, 150, 160, 0.65);
-            box-shadow: 0 10px 20px -5px rgba(148, 153, 161, 0.65);
-       }
+     #calendar {
+          width: 80%;
+          position: fixed;
+          top: 52%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          -webkit-box-shadow: 0 10px 20px -5px rgba(145, 150, 160, 0.65);
+          box-shadow: 0 10px 20px -5px rgba(148, 153, 161, 0.65);
+     }
 
-       .addPopup{
+/* This adjusts the popup form */
+
+     .addPopup{
           border-radius: 5px;
           background-color: #f2f2f2;
           padding: 10px;
-          position: relative;
+          position: fixed;
           z-index: 1;
           width: 25%;
+          left: 39%;
           text-align: center;
           display: flex;
           flex-direction: column; 
           margin: auto;
-          margin-top: 80px;
+          top: 15%;
           -webkit-box-shadow: 0 10px 20px -5px rgba(145, 150, 160, 0.65);
           box-shadow: 0 10px 20px -5px rgba(148, 153, 161, 0.65);
           visibility: hidden;
-        }
+     }
 
-      input, select, textarea {
-          width: 100%; /* Full width */
-          padding: 6px; /* Some padding */ 
-          border: 1px solid #ccc; /* Gray border */
-          border-radius: 4px; /* Rounded borders */
+
+     input, select, textarea {
+          width: 100%;
+          padding: 6px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
           box-sizing: border-box;
-          margin-top: 6px; /* Add a top margin */
-          margin-bottom: 16px; /* Bottom margin */
-          resize: vertical
-        }
+          margin-top: 6px; 
+          margin-bottom: 16px;
+          resize: vertical;
+     }
 
-        label {
+     label {
           float: left;
           font-family: 'Titillium Web', sans-serif;
           font-size: 15px;
-        }
+     }
 
-        textarea {
-          height: 50px;
-        }
+     #exit {
+          color: white;
+          background-color: rgb(172, 15, 15);
+          width: 25px;
+          height: 25px;
+          float: right;
+          font-size: 10;
+          text-align: center;
+          margin: auto;
+          cursor: pointer;
+     }
 
-        #colorId {
+     #exit:hover {
+          background-color: rgb(109, 9, 9);
+          transition: all 0.5s ease;
+     }
+
+     #nlabel {
+          margin-top: 6px;
+     }
+
+     textarea, #startDate, #endDate {
           height: 50px;
-        }
-        
-        #confirm {
-          background-color: #26367c;
+     }
+
+     #color, #b {
+          margin-right: 250px;
+     }
+     
+     #colorId {
+          margin-bottom: 6px;
+          margin-right: 250px;
+          width: 50px;
+          height: 50px;
+          float: left !important;
+     }
+     
+     #confirm {
+          background-color: #1b7e31;
           color: white;
           padding: 12px 20px;
           border: none;
@@ -207,23 +272,33 @@
           cursor: pointer;
           font-family: 'Titillium Web', sans-serif;
           font-size: 15px;
-        }
-        
-        #confirm:hover {
-          background-color: #1f2b61;
-        }
+          width: 100px;
+          margin-bottom: 13px;
+     }
+     
+     #confirm:hover {
+          background-color: #0a531a;
+          transition: all 0.5s ease;
+     }
 
-       .calendar-events {
+     #type, #etype {
+          visibility: hidden;
+          width: 100%;
+     }
+
+/* This adjusts the event planner */
+
+     .calendar-events {
           display: table;
-       }
+     }
 
-       .calendar-events > .event-buttons {
+     .calendar-events > .event-buttons {
           display : table-row;
           vertical-align : bottom;
           height : 55px;
-       }
+     }
 
-       .calendar-events > .event-buttons > button {
+     .calendar-events > .event-buttons > button {
           color: #5e6cb5;
           font-family: 'Titillium Web', sans-serif;
           font-size: 15px;
@@ -240,26 +315,26 @@
           position: relative;
           margin: 10px 10px 0 10px;
           float: bottom;
-      }
+     }
 
-      .calendar-events > .event-buttons > button:hover {
-            background-color: #454b7e;
-            color: white;
-            transition: all 0.5s ease;
-       }
+     .calendar-events > .event-buttons > button:hover {
+          background-color: #454b7e;
+          color: white;
+          transition: all 0.5s ease;
+     }
 
-       /* button.btn-action:disabled {
-            background-color: #e4e4e4;
-            border-color: #e4e4e4;
-            -webkit-transform: scale(.9);
-            -ms-transform: scale(.9);
-            transform: scale(.9);
-            cursor: not-allowed;
-        }
+     /* button.btn-action:disabled {
+          background-color: #e4e4e4;
+          border-color: #e4e4e4;
+          -webkit-transform: scale(.9);
+          -ms-transform: scale(.9);
+          transform: scale(.9);
+          cursor: not-allowed;
+     }
 
-        button.btn-action.active {
-            background-color: #8696c7;
-            color: #fff;
-        } */
+     button.btn-action.active {
+          background-color: #8696c7;
+          color: #fff;
+     } */
 
  </style>

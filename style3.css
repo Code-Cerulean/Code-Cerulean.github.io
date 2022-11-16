@@ -2,24 +2,36 @@
 
 :root {
     --button-color: #163372;
-  }
+}
 
 /* Overall website */
-       * {
-           margin: 0;
-           padding: 0;
-           border: 0;
-       }
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }   
+
+        #link {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 20;
+            border-color: #ffffff;
+            width: 215px;
+            height: 35px;
+            color: transparent;
+        }
 
     /* Website Icon */
         .icon span{
-                position: fixed;
-                left: 10px;
-                top: 13.5px;
-            }
+            position: fixed;
+            left: 10px;
+            top: 13.5px;
+            animation: shimmer 20s ease infinite;
+        }
 
 /* Start of Header Bar */
-       .bar {
+        .bar {
             width: 100%;
             float: none;
             background: transparent;
@@ -34,10 +46,10 @@
             letter-spacing: 0.1em;
             line-height: 150%;
             font-weight: bold;
-       }
+        }
 
     /* Website Name */
-       .bar a {
+        .bar a {
            float: left;
            margin-left: 27px;
            color: black;
@@ -49,10 +61,29 @@
            font-size: 17px;
            font-weight: 600;
            cursor: default;
-       }
+           animation: shimmer 20s ease infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                color: black;
+            }
+            25% {
+                color: white;
+            }
+            50% {
+                color: white;
+            }
+            75% {
+                color: white;
+            }
+            100% {
+                color: black;
+            }
+        }
 
     /* Dropdown Button */
-       .dropbtn {
+        .dropbtn {
            background-color: transparent;
            border-radius: 5px;
            margin: 4px;
@@ -71,56 +102,56 @@
         }
 
    /* Dropdown Content */
-      .dropdown-content {
-           float: right;
-           position: fixed;
-           right: 13px;
-           top: 13px;
-           min-width: 160px;
-           z-index: -1;
-           opacity: 0;
-           display: block;
-           transition: all 0.7s;
-           margin: 6px;
-           margin-top: 0px;
-           margin-right: 10px;
-      }
-      .dropdown-content a {
-           color: white;
-           padding: 12px 10px;
-           text-decoration: none;
-           display: inline;
-           text-align: center;
-           font-family: 'Montserrat', sans-serif;
+        .dropdown-content {
+            float: right;
+            position: fixed;
+            right: 13px;
+            top: 13px;
+            min-width: 160px;
+            z-index: -1;
+            opacity: 0;
+            display: block;
+            transition: all 0.7s;
+            margin: 6px;
+            margin-top: 0px;
+            margin-right: 10px;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 10px;
+            text-decoration: none;
+            display: inline;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
             letter-spacing: 0.1em;
             line-height: 150%;
             font-size: 15px;
             font-weight: 400;
-      }
+        }
 
    /* Hover Options */
-      .dropdown:hover  .dropbtn{
-           color: #a6a6a6;
-       }
-       .dropdown:hover .dropdown-content {
-           visibility: visible;
-           z-index: 1;
-           opacity: 1;
-           transition: all 0.7s;
-      }
-      .dropdown:not(:hover) .dropdown-content {
-        z-index: -1;
-        transition: all 0.7s;
-    }
-      .dropdown-content a:hover {
-           color: #a6a6a6;
-           transition: all 0.7s;
-    } 
+        .dropdown:hover  .dropbtn{
+            color: #a6a6a6;
+        }
+        .dropdown:hover .dropdown-content {
+            visibility: visible;
+            z-index: 1;
+            opacity: 1;
+            transition: all 0.7s;
+        }
+        .dropdown:not(:hover) .dropdown-content {
+            z-index: -1;
+            transition: all 0.7s;
+        }
+        .dropdown-content a:hover {
+            color: #a6a6a6;
+            transition: all 0.7s;
+        } 
 
 /* End of Header Bar */   
 
 /* This adjusts the background and overall alignment of components */
-       body {
+        body {
             justify-content: center;
             align-items: center;
             overflow: hidden;
@@ -129,9 +160,9 @@
             background-size: 400% 400%;
             animation: gradient 20s ease infinite;
             height: 100vh;
-       }
+        }
 
-       @keyframes gradient {
+        @keyframes gradient {
             0% {
                 background-position: 0% 50%;
             }
@@ -143,7 +174,7 @@
             }
         }
 
-       .Scp{
+        .Scp{
             margin: auto;
             top: 150px;
         }
@@ -161,8 +192,9 @@
             height: 500px;
             width: 70%;
             margin-top: 5%;
+            left: 15%;
             text-align: center;
-            position: relative;
+            position: fixed;
 
         }
 
@@ -174,23 +206,25 @@
             text-transform: uppercase;
             margin-left: auto;
             margin-right: auto;
+            cursor: default;
         }
 
         .creds h2::after {
-                content: '';
-                position: fixed;
-                margin-top: 40px;
-                width: 200px;
-                height: 3.5px;
-                left: 49.5%;
-                transform: translate(-50%,-50%);
-                text-align: center;
-                background-color: rgba(0, 0, 0, 0.15);
+            content: '';
+            position: fixed;
+            margin-top: 40px;
+            width: 200px;
+            height: 3.5px;
+            left: 49.5%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.15);
         }
 
         .creds ul {
             list-style-type: none;
             margin-top: 15px;
+            cursor: default;
         }
 
         .creds li {
@@ -222,6 +256,7 @@
             text-transform: uppercase;
             font-style: bold;
             font-weight: 600;
+            cursor: default;
         }
 
         .creds .one::after {

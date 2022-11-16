@@ -339,7 +339,7 @@ tr.calendar-body .calendar-day .day[disabled] {
     -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
-    cursor: pointer;
+    cursor: default;
     float: left;
 }
 .event-container::before {

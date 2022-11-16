@@ -40,6 +40,7 @@
  
 <!--Start top menu bar-->
 <header>
+  <a href="https://github.com/Code-Cerulean/Code-Cerulean.github.io/tree/main" id="link">link</a>
     <div class="icon">
       <span class="material-symbols-outlined">
         tsunami
@@ -99,74 +100,114 @@
           date: ["November/23/2022", "November/27/2022"], // Date range
           description: "LSU issued break for Thanksgiving", // Event description (optional)
           type: "event",
-          color: "#63d867" // Event custom color (optional)
+          color: "#e05e43" // Event custom color (optional)
         }
       ]
     })
   })
 
-  function addEvent() {
-    
+
+ function addEvent() {
+   
+  var x = document.getElementById("frm");
+  var eventN = x.elements[1].value;
+  var eDesc = x.elements[2].value;
+  var start = x.elements[3].value;
+  var end = x.elements[4].value;
+  var c = x.elements[5].value;
+  var bdg = x.elements[6].value;
+  var eventT = document.getElementById("trash").elements[0].value;
+
+  let realstart = new Date(start);
+  realstart.setDate(realstart.getDate() + 1);
+  start = realstart;
+
+  let validEnd = end;
+
+  if (validEnd == "") {
+    end = start;
+  }
+  else {
+    let realend = new Date(end);
+    realend.setDate(realend.getDate() + 1);
+    end = realend;
+  }
+
   $("#calendar").evoCalendar('addCalendarEvent', [
-    {
+  {
+    name: eventN,
+    type: eventT,
+    description: eDesc,
+    date: [start, end],
+    color: c,
+    id: '09nk7T5',
+    badge: bdg,
+  }
+])  
+  
+  document.getElementById("frm").reset();
+ };
 
-      name: "test",
-      type: "birthday",
-      description: "this event is a test",
-      date: "November/15/2022",
-      color: "#63d867",
-      id: '09nk7T5',
-    }
-  ])};
+var isHidden = true;
 
-    var isHidden = true;
+document.getElementById("addBtn").addEventListener("click", function(e) {
+  hideFunction()
+});
 
-    document.getElementById("addBtn").addEventListener("click", function(e) {
-      hideFunction()
-    });
+function hideFunction() {
+  if(isHidden){
+    document.querySelectorAll(".addPopup").forEach(x => x.style.visibility = "visible");
+    isHidden = false;
+  }
+  else{
+    document.querySelectorAll(".addPopup").forEach(x => x.style.visibility = "hidden");
+    isHidden = true;
+  }
+}
 
-    function hideFunction() {
-      if(isHidden){
-        document.querySelectorAll(".addPopup").forEach(x => x.style.visibility = "visible");
-        isHidden = false;
-      }
-      else{
-        document.querySelectorAll(".addPopup").forEach(x => x.style.visibility = "hidden");
-        isHidden = true;
-      }
-    }
+function removeEvents() {
+  $("#calendar").evoCalendar('removeCalendarEvent','09nk7T5')
+}
 
-  </script>
+</script>
 
 <div class="addPopup">
-  <form>
-
-    <label for="ename">Event Name</label>
+  
+  <form id="frm">
+    
+    <label for="ename" id="nlabel">Event Name</label>
+    <input type="button" id="exit" value="&#10005;" onclick="hideFunction()">
     <input type="text" id="ename" name="eventname" placeholder="Event name..">
 
-    <label for="etype">Event Type</label>
+    <label for="desc">Event Description (optional)</label>
+    <textarea id="desc" name="desc" placeholder="What's happening on this day?"></textarea>
+
+    <label id="date">Starting</label>
+    <input type="date" id="startDate">
+    <label id="to">Ending (optional)</label>
+    <input type="date" id="endDate">
+
+    <label id="color">Event Color</label><p></p>
+    <input type="color" id="colorId" value="#000000"><br>
+
+    <label for="bdg" id="b">Event Badge (optional)</label>
+    <textarea id="bdg" name="bdg" placeholder="Date range, importance, or emoji perhaps?"></textarea>
+
+    <input type="button" id="confirm" value="Confirm" onclick="addEvent()+hideFunction()">
+
+    
+
+  </form>
+</div>
+
+<form id="trash">
+    <label for="etype" id="type">Event Type</label>
     <select id="etype" name="etype">
       <option value="event">Event</option>
       <option value="holiday">Holiday</option>
       <option value="birthday">Birthday</option>
     </select>
-
-    <label for="desc">Event Description (optional)</label>
-    <textarea id="desc" name="desc" placeholder="Write something.."></textarea>
-
-    <label id="date">Event Date</label>
-    <input type="date" id="startDate">
-    <label id="to">to</label>
-    <input type="date" id="endDate">
-
-    <label id="color">Event Color (optional)</label>
-    <input type="color" id="colorId" value="#aa0039">
-
-    <button id="confirm" onclick="addEvent()">Confirm</button>
-
-  </form>
-</div>
-
+</form>
 
 </body>
  

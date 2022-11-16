@@ -2,59 +2,88 @@
 
 :root {
     --button-color: #163372;
-  }
+}
 
-     /* Overall website */
-     * {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        text-decoration: none;
+/* Overall website */
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
         }
 
-   /* Website Icon */
-   .icon span{
-             position: fixed;
-             left: 10px;
-             top: 13.5px;
+        #link {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 20;
+            border-color: #ffffff;
+            width: 215px;
+            height: 35px;
+            color: transparent;
         }
 
-   /* Start of Header Bar */
-   .bar {
-        width: 100%;
-        float: none;
-        background: transparent;
-        overflow: hidden;
-        position: fixed;
-        box-sizing: border-box;
-        top: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        line-height: 150%;
-        font-weight: bold;
-   }
+    /* Website Icon */
+        .icon span {
+            position: fixed;
+            left: 10px;
+            top: 13.5px;
+            animation: shimmer 20s ease infinite;
+        }
 
-   /* Website Name */
-   .bar a {
-        float: left;
-        margin-left: 27px;
-        color: black;
-        text-align: center;
-        padding: 14px 14px;
-        text-decoration: none; 
-        letter-spacing: 2px;
-        font-family: 'Roboto', sans-serif;
-        
-        font-size: 17px;
-        font-weight: 600;
-        cursor: default;
-   }
+/* Start of Header Bar */
+        .bar {
+            width: 100%;
+            float: none;
+            background: transparent;
+            overflow: hidden;
+            position: fixed;
+            box-sizing: border-box;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            line-height: 150%;
+            font-weight: bold;
+        }
+
+    /* Website Name */
+        .bar a {
+           float: left;
+           margin-left: 27px;
+           color: black;
+           text-align: center;
+           padding: 14px 14px;
+           text-decoration: none; 
+           letter-spacing: 2px;
+           font-family: 'Roboto', sans-serif;
+           font-size: 17px;
+           font-weight: 600;
+           cursor: default;
+           animation: shimmer 20s ease infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                color: black;
+            }
+            25% {
+                color: white;
+            }
+            50% {
+                color: white;
+            }
+            75% {
+                color: white;
+            }
+            100% {
+                color: black;
+            }
+        }
 
     /* Dropdown Button */
-       .dropbtn {
+        .dropbtn {
            background-color: transparent;
            border-radius: 5px;
            margin: 4px;
@@ -73,52 +102,53 @@
         }
 
    /* Dropdown Content */
-      .dropdown-content {
-           float: right;
-           position: fixed;
-           right: 45px;
-           top: 13px;
-           z-index: -1;
-           opacity: 0;
-           display: block;
-           transition: all 0.7s;
-           margin: 6px;
-           margin-top: 0px;
-           margin-right: 10px;
-      }
-      .dropdown-content a {
-           color: white;
-           padding: 12px 10px;
-           text-decoration: none;
-           display: inline;
-           text-align: center;
-           font-family: 'Montserrat', sans-serif;
+        .dropdown-content {
+            float: right;
+            position: fixed;
+            right: 13px;
+            top: 13px;
+            min-width: 160px;
+            z-index: -1;
+            opacity: 0;
+            display: block;
+            transition: all 0.7s;
+            margin: 6px;
+            margin-top: 0px;
+            margin-right: 10px;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 10px;
+            text-decoration: none;
+            display: inline;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
             letter-spacing: 0.1em;
             line-height: 150%;
             font-size: 15px;
             font-weight: 400;
-      }
+        }
 
    /* Hover Options */
-      .dropdown:hover  .dropbtn{
-           color: #a6a6a6;
-       }
-       .dropdown:hover .dropdown-content {
-           visibility: visible;
-           z-index: 1;
-           opacity: 1;
-           transition: all 0.7s;
-      }
-      .dropdown:not(:hover) .dropdown-content {
-        z-index: -1;
-        transition: all 0.7s;
-    }
-      .dropdown-content a:hover {
-           color: #a6a6a6;
-           transition: all 0.7s;
-    } 
+        .dropdown:hover  .dropbtn{
+            color: #a6a6a6;
+        }
+        .dropdown:hover .dropdown-content {
+            visibility: visible;
+            z-index: 1;
+            opacity: 1;
+            transition: all 0.7s;
+        }
+        .dropdown:not(:hover) .dropdown-content {
+            z-index: -1;
+            transition: all 0.7s;
+        }
+        .dropdown-content a:hover {
+            color: #a6a6a6;
+            transition: all 0.7s;
+        } 
 
-/* End of Header Bar */    
+/* End of Header Bar */      
 
 /* This adjusts the background and overall alignment of components */
         body {
@@ -146,7 +176,7 @@
         }
 
 /* This adjusts the date and the time overall */
-       .wrapper {
+        .wrapper {
            text-align: center;
            justify-content: center;
            align-items: center;
@@ -154,10 +184,10 @@
            display: flex;
            flex-direction: column;
            position: relative;
-       }
+        }
 
 /* This adjusts the date specifically */
-       #date {
+        #date {
             font-size: 50px;
             font-weight: 300;
             letter-spacing: 3px;
@@ -167,7 +197,7 @@
         }
 
 /* This adjusts the clock spcifically */
-       #clock {
+        #clock {
             font-size: 130px;
             font-weight: 200;
             font-family: 'Karla', sans-serif;
@@ -185,38 +215,38 @@
             -webkit-backdrop-filter: blur( 4px );
             border-radius: 10px;
             border: 1px solid rgba( 255, 255, 255, 0.18 );
-       }
+        }
 
 /* This adjusts the dropdown options */
 
-       .column {
-           display: inline;
-           margin: 5px;
-       }
-       .wrapper .content {
-           width: 100%;
-           display: inline;
-           justify-content: space-between;
-           padding: 20px 0 4px;
-       }
-       .content .column {
-           border-radius: 8px;
-           padding: 8px 3px 8px;
-           width: calc(100% / 3 - 5px);
-           height: 40px;
-       }
+        .column {
+            display: inline;
+            margin: 5px;
+        }
+        .wrapper .content {
+            width: 100%;
+            display: inline;
+            justify-content: space-between;
+            padding: 20px 0 4px;
+        }
+        .content .column {
+            border-radius: 8px;
+            padding: 8px 3px 8px;
+            width: calc(100% / 3 - 5px);
+            height: 40px;
+        }
 
-       .column select {
-           outline: none;
-           border: none;
-           border-radius: 8px;
-           height: 40px;
-           font-size: 13px;
-           font-family: 'Montserrat', sans-serif;
-           font-style: bold;
-           cursor: pointer;
-           padding: 10px 10px 10px;
-       }
+        .column select {
+            outline: none;
+            border: none;
+            border-radius: 8px;
+            height: 40px;
+            font-size: 13px;
+            font-family: 'Montserrat', sans-serif;
+            font-style: bold;
+            cursor: pointer;
+            padding: 10px 10px 10px;
+        }
 
         .column select:not(#select_genre, #select_playlist) {
             width: 100px;
@@ -250,20 +280,20 @@
        }
 
        .wrapper button#btn_submit {
-        width: 100px;
-        outline: none;
-        border: none;
-        cursor: pointer;
-        color: white;
-        font-size: 15px;
-        font-family: 'Montserrat', sans-serif;
-        letter-spacing: 1px;
-        padding: 12px 0;
-        margin: 15px 5px 0 5px;
-        border-radius: 8px;
-        background: black;
-        display: inline;
-    }
+            width: 100px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 15px;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1px;
+            padding: 12px 0;
+            margin: 15px 5px 0 5px;
+            border-radius: 8px;
+            background: black;
+            display: inline;
+        }
 
        .wrapper button:hover{
            background-color: #273062;
@@ -316,11 +346,11 @@
         }
 
         /* This adjusts the spotify player */
-        #player {
-            position: fixed; 
-            left: 5px; 
-            bottom: 0px; 
-            top: 320px;
+        iframe {
+            position: fixed;
+            width: 300px;
+            bottom: 10px;
+            left: 10px;
         }
 
         /* This adjusts the scrollbar */

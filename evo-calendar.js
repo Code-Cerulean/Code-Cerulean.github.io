@@ -588,7 +588,7 @@
 
                         '<div class="event-buttons">'+
                             '<button id="addBtn" onclick="hideFunction()">ADD EVENT</button>'+
-                            '<button id="removeBtn" onclick="hideFunction()">REMOVE EVENT</button>'+
+                            '<button id="removeBtn" onclick="removeEvents()">CLEAR ALL EVENTS</button>'+
                         '</div>'+
                     '</div>';
 
