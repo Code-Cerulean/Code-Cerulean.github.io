@@ -1,5 +1,5 @@
 var client_id = 'CLIENT_ID';
-var redirect_uri = 'http://localhost:3000/callback';
+var redirect_uri = 'http://https://code-cerulean.github.io//callback';
 
 var app = express();
 
