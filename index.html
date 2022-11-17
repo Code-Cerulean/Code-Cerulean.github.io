@@ -233,11 +233,38 @@
      <button id = 'clearButton' onclick='clearAlarm()'>Clear Alarm</button>
 </div>
 
-<!-- Load React. -->
-<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<!--Insert playlist into src-->
 
- <!-- Load our React component. -->
+<div class = "column">
+  <form id="linkform>"></form>
+    <div class="column">
+        <input type="text" id="playlist_link" name="plink" placeholder="Upload link to your playlist here">
+    </div>
+    <div class="column">
+        <button id="upload" onclick="insertPlaylist()">Upload</button>
+    </div>
+    </form>
+</div>
+
+<script>
+function insertPlaylist() {
+  var ulink = document.getElementById("playlist_link").value;
+  var temp = ulink.replace('https://open.spotify.com/playlist/', 'https://open.spotify.com/embed/playlist/');
+  var elink = '';
+  
+  if (temp.includes("?")) {
+    elink = temp.split('?')[0];
+    elink += "?utm_source=generator&theme=0";
+  }
+  else if(!temp.includes("?")) {
+    elink += temp + "?utm_source=generator&theme=0";
+  }
+
+  document.getElementById('player').src = elink;
+  document.getElementById("playlist_link").value = "Upload link to your playlist here";
+}
+</script>
+
  <script src="login.js"></script>
 
 	<!--Start of Carson Changes 11/14/22-->
@@ -275,7 +302,7 @@
 <!--End of Carson Changes 11/14/22-->
 
 <!-- Spotify playlist embed-->		 
-	<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0VdFQqzv7BbuvNLdiy7oYS?utm_source=generator&theme=0" 
+	<iframe id="player" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0VdFQqzv7BbuvNLdiy7oYS?utm_source=generator&theme=0" 
          width="95%" height="350" frameBorder="0" allowfullscreen="" 
          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
          loading="lazy">

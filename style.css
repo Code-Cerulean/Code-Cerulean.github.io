@@ -254,7 +254,7 @@
             width: 100px;
         }
 
-        .column select#select_genre, #select_playlist {
+        .column select#select_genre {
             width: auto;
         }
 
@@ -262,6 +262,31 @@
             width: 200px;
         }
 
+/* This adjusts the input text box and the suggestion text */
+
+        .column #playlist_link {
+            outline: none;
+            border: none;
+            border-radius: 8px;
+            height: 40px;
+            font-size: 13px;
+            font-family: 'Montserrat', sans-serif;
+            font-style: bold;
+            cursor: pointer;
+            padding: 10px 10px 10px;
+            width: 400px;
+            cursor: text;
+        }
+
+        #suggest {
+            color:white;
+            font-size: 15px;
+            font-family: 'Montserrat', sans-serif;
+            display: block;
+            margin: 15px 0 0 0;
+            text-shadow: 0 8px 20px rgba(31, 38, 135);
+            cursor: pointer;
+        }
 
 /* This adjusts the buttons */
 
@@ -281,7 +306,7 @@
            display: inline;
        }
 
-       .wrapper button#btn_submit {
+       .wrapper button#btn_submit, .wrapper button#upload {
             width: 100px;
             outline: none;
             border: none;
@@ -297,14 +322,14 @@
             display: inline;
         }
 
-       .wrapper button:hover{
-           background-color: #273062;
-           color: white;
-           transition: 0.5s;
-       } 
+        .wrapper button:hover{
+            background-color: #273062;
+            color: white;
+            transition: 0.5s;
+        } 
 
        .column form {
-        margin-left: 5px;
+            margin-left: 5px;
        }
 
 /* This adjusts the songs list */
